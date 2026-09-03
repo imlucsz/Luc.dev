@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.technology-sphere {
+  position: relative;
+  width: min(100%, 560px);
+  height: 430px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  perspective: 900px;
+}
+
+.technology-sphere:active {
+  cursor: grabbing;
+}
+
+.technology-sphere::before {
+  content: "";
+  position: absolute;
+  width: 336px;
+  height: 336px;
+  border: 1px solid rgba(248, 113, 113, 0.15);
+  border-radius: 50%;
+  box-shadow: inset 0 0 70px rgba(248, 113, 113, 0.06), 0 0 70px rgba(248, 113, 113, 0.06);
+}
+
+.technology-sphere__halo {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(248, 113, 113, 0.1), transparent 68%);
+}
+
+.technology-sphere__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 74px;
+  height: 74px;
+  margin: -37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #d4d4d8;
+  font: 10px var(--font-geist-mono), monospace;
+  transition: filter 120ms ease, opacity 120ms ease;
+  will-change: transform;
+}
+
+.technology-sphere__item img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.technology-sphere__item span {
+  white-space: nowrap;
+  text-shadow: 0 1px 8px #09090b;
+}
+
+.technology-sphere__item:hover {
+  color: #fca5a5;
+}
+
+@media (max-width: 640px) {
+  .technology-sphere {
+    height: 350px;
+  }
+
+  .technology-sphere::before {
+    width: 270px;
+    height: 270px;
+  }
+
+  .technology-sphere__item {
+    width: 62px;
+    height: 62px;
+    margin: -31px;
+  }
+
+  .technology-sphere__item img {
+    width: 29px;
+    height: 29px;
+  }
+}
