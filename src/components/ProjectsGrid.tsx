@@ -15,8 +15,8 @@ export function ProjectsGrid() {
             Projetos em Destaque
           </h2>
           <p className="text-zinc-400 text-sm md:text-base max-w-xl">
-            Aplicações focadas em arquitetura backend, microsserviços e
-            integração de banco de dados.
+            Um projeto autoral de automação e integração de serviços,
+            desenvolvido como Trabalho de Conclusão de Curso.
           </p>
         </div>
 
