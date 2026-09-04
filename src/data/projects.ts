@@ -23,6 +23,7 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  
   {
     slug: "chatbot-whatsapp-barbearia",
     title: "Chatbot WhatsApp para Barbearia",
@@ -56,7 +57,7 @@ export const projects: Project[] = [
       "Google Sheets API",
       "Webhooks",
     ],
-    frontendRepo:
+    backendRepo:
       "https://github.com/imlucsz/whatsapp-automation-Hair-salon",
     features: [
       "Menu de serviços e preços pelo WhatsApp",
@@ -75,4 +76,37 @@ export const projects: Project[] = [
       "Variáveis de ambiente para manter credenciais e configurações fora do código",
     ],
   },
-];
+{
+    slug: "splitscreen-badgley-x-curry",
+    title: "SplitScreen: Badgley x Curry",
+    tagline: "Projeto acadêmico desenvolvido como um portal web imersivo para apresentar a trajetória, carreira e conquistas do ator Penn Badgley e do atleta Stephen Curry de forma interativa.",
+    role: "Autor / Desenvolvedor Front-End",
+    period: "2026",
+    imageUrl: "/capa_penn_vs cury.jpg",
+    color: "#09e51b",
+    description: "Portal web interativo que une entretenimento e esportes, apresentando as biografias e marcos de Penn Badgley e Stephen Curry em uma experiência cinematográfica.",
+    fullDescription: "Desenvolvido para a disciplina de Desenvolvimento Web I do curso de DSM na FATEC Itaquera, o SplitScreen une as histórias de um artista e de um atleta em uma única Single Page Application (SPA). O projeto conta com design system dark, componentes modulares, linha do tempo interativa com animações de scroll, quiz com pontuação em tempo real e um player multimídia com integração do YouTube.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Git"],
+    frontendRepo: "https://github.com/imlucsz/Fan-Page",
+    liveUrl: "https://fan-page-indol.vercel.app/",
+    features: [
+      "Perfil Hero imersivo com efeito tilt e vídeo de fundo interativo",
+      "Navegação por abas (Sobre, Carreira, Prêmios) e linha do tempo expansível",
+      "Carrosséis e modais dinâmicos no estilo plataformas de streaming",
+      "Quiz interativo com embaralhamento e cálculo de pontuação ao vivo",
+      "Player de vídeo customizado com playlist lateral dinâmica",
+      "Cursor customizado em desktop e layout 100% responsivo"
+    ],
+    architecture: [
+      "HTML5 Semântico focado em acessibilidade e marcas ARIA",
+      "CSS3 avançado com CSS Grid, Flexbox e variáveis customizadas",
+      "JavaScript Vanilla para manipulação avançada do DOM e Intersection Observer",
+      "Estrutura otimizada em Single Page Application (SPA)"
+    ],
+    gallery: [
+      { url: "/projects/splitscreen-hero.png", caption: "Seção Hero do perfil interativo." },
+      { url: "/projects/splitscreen-timeline.png", caption: "Linha do tempo e carrossel de obras." },
+      { url: "/projects/splitscreen-quiz.png", caption: "Módulo de quiz com feedback em tempo real." }
+    ],
+  } 
+]
