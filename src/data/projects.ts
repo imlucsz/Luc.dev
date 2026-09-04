@@ -79,7 +79,7 @@ export const projects: Project[] = [
 {
     slug: "splitscreen-badgley-x-curry",
     title: "SplitScreen: Badgley x Curry",
-    tagline: "Projeto acadêmico desenvolvido como um portal web imersivo para apresentar a trajetória, carreira e conquistas do ator Penn Badgley e do atleta Stephen Curry de forma interativa.",
+    tagline: "Projeto acadêmico desenvolvido como um portal webgit imersivo para apresentar a trajetória, carreira e conquistas do ator Penn Badgley e do atleta Stephen Curry de forma interativa.",
     role: "Autor / Desenvolvedor Front-End",
     period: "2026",
     imageUrl: "/capa_penn_vs cury.jpg",
@@ -135,6 +135,30 @@ export const projects: Project[] = [
       { 
         url: "/galeria_penn.png", 
         caption: "Mural multimídia com exibição de fotos e momentos marcantes do ator." 
+      },
+      { 
+        url: "/curry_inicio.png", 
+        caption: "Seção Hero de Stephen Curry no estilo Spotify com estatísticas da NBA." 
+      },
+      { 
+        url: "/conheca_curry.png", 
+        caption: "Perfil detalhado do atleta com contadores de títulos, MVPs e arremessos." 
+      },
+      { 
+        url: "/timeline_curry.png", 
+        caption: "Linha do tempo interativa rastreando da NCAA ao topo do basquete mundial." 
+      },
+      { 
+        url: "/estatisticas_curry.png", 
+        caption: "Painel visual de métricas avançadas e histórico das melhores temporadas." 
+      },
+      { 
+        url: "/spotify_curry.png", 
+        caption: "Interface de jogos históricos inspirada no visual do Spotify." 
+      },
+      { 
+        url: "/quiz_curry.png", 
+        caption: "Quiz interativo temático sobre a trajetória de Stephen Curry." 
       },
     ],
   } 
