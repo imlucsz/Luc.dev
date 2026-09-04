@@ -104,9 +104,38 @@ export const projects: Project[] = [
       "Estrutura otimizada em Single Page Application (SPA)"
     ],
     gallery: [
-      { url: "/projects/splitscreen-hero.png", caption: "Seção Hero do perfil interativo." },
-      { url: "/projects/splitscreen-timeline.png", caption: "Linha do tempo e carrossel de obras." },
-      { url: "/projects/splitscreen-quiz.png", caption: "Módulo de quiz com feedback em tempo real." }
+      { 
+        url: "/lobby.png", 
+        caption: "Lobby SplitScreen: escolha interativa entre o universo do entretenimento e dos esportes." 
+      },
+      { 
+        url: "/inicial_penn.png", 
+        caption: "Seção Hero de Penn Badgley com tipografia temática e citação marcante." 
+      },
+      { 
+        url: "/conheca_peen.png", 
+        caption: "Visão geral do artista com métricas de carreira e navegação por abas." 
+      },
+      { 
+        url: "/timeline_penn.png", 
+        caption: "Linha do tempo interativa destacando os principais marcos históricos e profissionais." 
+      },
+      { 
+        url: "/netflix_penn.png", 
+        caption: "Carrossel de obras no estilo plataforma de streaming com detalhes em modal." 
+      },
+      { 
+        url: "/Quiz_penn.png", 
+        caption: "Módulo de quiz interativo para testar o conhecimento do usuário." 
+      },
+      { 
+        url: "/Player_de_Vídeos_penn.png", 
+        caption: "Player de mídia customizado com integração ao YouTube e playlist lateral." 
+      },
+      { 
+        url: "/galeria_penn.png", 
+        caption: "Mural multimídia com exibição de fotos e momentos marcantes do ator." 
+      },
     ],
   } 
 ]
