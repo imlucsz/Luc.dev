@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Briefcase, GraduationCap, Building2 } from "lucide-react";
+import Image from "next/image";
+import { Briefcase, GraduationCap } from "lucide-react";
 import { profileData } from "@/data/profile";
 
 export function Experience() {
@@ -37,8 +38,18 @@ export function Experience() {
                   <h4 className="text-xl font-bold text-zinc-100 mt-1">
                     {exp.role}
                   </h4>
-                  <div className="flex items-center gap-1.5 text-sm text-zinc-400 mt-0.5 mb-3">
-                    <Building2 size={14} />
+                  <div className="flex items-center gap-2 text-sm text-zinc-400 mt-2 mb-3">
+                    {exp.logoUrl && (
+                      <span className="relative h-14 w-28 shrink-0 overflow-hidden rounded-lg bg-white">
+                        <Image
+                          src={exp.logoUrl}
+                          alt={`${exp.company} logo`}
+                          fill
+                          sizes="112px"
+                          className="object-contain p-1"
+                        />
+                      </span>
+                    )}
                     <span>{exp.company}</span>
                   </div>
                   <p className="text-sm text-zinc-400 leading-relaxed">

@@ -71,7 +71,8 @@ export function About() {
                   <span className="text-sm">Formação Ativa</span>
                 </div>
                 <p className="text-xs text-zinc-400">
-                  Desenvolvimento de Software Multiplataforma na Fatec Itaquera.
+                  Cursando DSM na Fatec Itaquera · Técnico em Administração
+                  concluído (ETEC).
                 </p>
               </div>
             </div>
