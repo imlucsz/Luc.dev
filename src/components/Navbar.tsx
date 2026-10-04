@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { Mail, Menu, X } from "lucide-react";
 import { profileData } from "@/data/profile";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +48,12 @@ export function Navbar() {
           </Link>
           <Link href="#techs" className="hover:text-zinc-100 transition-colors">
             Skills
+          </Link>
+          <Link
+            href="#certifications"
+            className="hover:text-zinc-100 transition-colors"
+          >
+            Certificações
           </Link>
         </nav>
 
@@ -92,6 +99,8 @@ export function Navbar() {
           >
             <Mail size={18} />
           </a>
+
+          <ThemeToggle />
 
           <button
             onClick={toggleMenu}
@@ -140,6 +149,13 @@ export function Navbar() {
                 className="hover:text-red-400 py-1 transition-colors block"
               >
                 // 04. Skills
+              </Link>
+              <Link
+                href="#certifications"
+                onClick={closeMenu}
+                className="hover:text-red-400 py-1 transition-colors block"
+              >
+                // 05. Certificações
               </Link>
             </nav>
           </motion.div>

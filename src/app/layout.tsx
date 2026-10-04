@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LoadingScreen } from "@/components/LoadingScreen";
+import { PixelPet } from "@/components/PixelPet";
+import { DesktopGoose } from "@/components/DesktopGoose";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,11 +29,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      suppressHydrationWarning
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("theme");if(t==="light"){document.documentElement.classList.remove("dark");document.documentElement.style.colorScheme="light"}else{document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark"}}catch(e){console.warn("Não foi possível ler a preferência de tema.",e)}`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
-        {children}
-        <LoadingScreen />
+        <ThemeProvider>
+          {children}
+          <LoadingScreen />
+          <DesktopGoose />
+          <PixelPet />
+        </ThemeProvider>
       </body>
     </html>
   );
