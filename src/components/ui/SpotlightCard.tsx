@@ -138,7 +138,7 @@ function ProjectCard({ project, dimmed, onHoverStart, onHoverEnd }: CardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-md border border-zinc-800 bg-zinc-900/80 px-2.5 py-1 font-mono text-[11px] text-zinc-300"
+              className="project-tag"
             >
               {tag}
             </span>

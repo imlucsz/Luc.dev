@@ -205,7 +205,7 @@ export default async function ProjectDetails(props: {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 text-xs font-mono rounded-md bg-red-900/20 text-red-300 border border-red-600/30"
+                  className="project-tag project-tag--red"
                 >
                   {tag}
                 </span>

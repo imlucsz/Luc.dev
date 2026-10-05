@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ArrowDown, Code2, Terminal } from "lucide-react";
 import { profileData } from "@/data/profile";
 import { DotField } from "./ui/DotField";
+import { ClippyAssistant } from "./ClippyAssistant";
 
 export function Hero() {
   return (
@@ -23,6 +24,10 @@ export function Hero() {
       </div>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-red-800/15 rounded-full blur-[140px] pointer-events-none z-0" />
+
+      <div className="clippy-hero-position">
+        <ClippyAssistant />
+      </div>
 
       <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 relative z-10 pointer-events-none">
         <motion.div

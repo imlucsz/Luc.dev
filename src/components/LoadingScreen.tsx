@@ -100,18 +100,30 @@ export function LoadingScreen() {
         isFading ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
     >
-      <Image
-        src="/snoopy-loading.gif"
-        alt="Snoopy programando enquanto a página carrega"
-        width={240}
-        height={240}
-        unoptimized
-        priority
-        className="mb-7 h-48 w-48 object-contain motion-safe:animate-pulse"
-      />
-      <p className="font-mono text-sm font-semibold tracking-[0.25em] text-emerald-400">
-        CARREGANDO...
-      </p>
+      <div className="terminal-loader">
+        <div className="terminal-header" aria-hidden="true">
+          <span className="terminal-title">lucas.dev</span>
+          <div className="terminal-controls">
+            <span className="terminal-control terminal-control-close" />
+            <span className="terminal-control terminal-control-minimize" />
+            <span className="terminal-control terminal-control-maximize" />
+          </div>
+        </div>
+        <div className="terminal-content">
+          <Image
+            src="/snoopy-loading.gif"
+            alt="Snoopy programando enquanto a página carrega"
+            width={240}
+            height={240}
+            unoptimized
+            priority
+            className="h-48 w-48 object-contain motion-safe:animate-pulse"
+          />
+          <span className="terminal-typing" aria-hidden="true">
+            &gt; loading...
+          </span>
+        </div>
+      </div>
       <p className="mt-3 max-w-sm text-sm leading-relaxed text-zinc-400">
         {phrase}
       </p>
