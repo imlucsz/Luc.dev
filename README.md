@@ -51,6 +51,7 @@ Além disso, a aplicação possui:
 
 - navegação responsiva;
 - animações suaves;
+- assistente Clippy com frases aleatórias e reativas;
 - layout mobile-first;
 - visual consistente para apresentação profissional;
 - páginas de detalhes com galeria de imagens, badges e arquitetura do projeto.

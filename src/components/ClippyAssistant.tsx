@@ -1,12 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { useCallback, useEffect, useState } from "react";
+import { clippyPhrases, getRandomClippyPhrase } from "@/data/clippy";
 
 export function ClippyAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+  const [phrase, setPhrase] = useState(clippyPhrases[0]);
+
+  const changePhrase = useCallback(() => {
+    setPhrase((currentPhrase) => getRandomClippyPhrase(currentPhrase));
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const intervalId = window.setInterval(changePhrase, 10_000);
+    return () => window.clearInterval(intervalId);
+  }, [changePhrase, isOpen]);
 
   return (
-    <div className="clippy-widget">
+    <div className="clippy-widget" onMouseEnter={changePhrase}>
       {isOpen && (
         <div className="clippy-bubble">
           <div className="clippy-titlebar">
@@ -28,9 +42,21 @@ export function ClippyAssistant() {
             </button>
           </div>
           <div className="clippy-content">
-            <p className="clippy-main-text">
-              Oi! Quer conhecer um pouco do meu trabalho?
-            </p>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.p
+                key={phrase}
+                layout
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -5 }}
+                transition={{ duration: 0.2 }}
+                className="clippy-main-text"
+                aria-live="polite"
+                aria-atomic="true"
+              >
+                {phrase}
+              </motion.p>
+            </AnimatePresence>
             <p className="clippy-prompt-text">Por onde começamos?</p>
             <div className="clippy-options">
               <a
@@ -57,9 +83,12 @@ export function ClippyAssistant() {
       <button
         type="button"
         className="clippy-sprite"
-        aria-label={isOpen ? "Clippy, assistente do portfólio" : "Abrir Clippy"}
+        aria-label={isOpen ? "Fechar Clippy" : "Abrir Clippy"}
         aria-expanded={isOpen}
-        onClick={() => setIsOpen((open) => !open)}
+        onClick={() => {
+          changePhrase();
+          setIsOpen((open) => !open);
+        }}
       >
         <svg
           viewBox="0 0 100 130"
