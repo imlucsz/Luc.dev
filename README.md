@@ -43,7 +43,7 @@ A landing page inclui:
 - Experiência e formação acadêmica.
 - Grid de projetos em destaque.
 - Página detalhada de cada projeto em rota dinâmica.
-- Seção de stack e habilidades por categoria.
+- Esfera interativa com as principais tecnologias utilizadas.
 - Seção de certificações e credenciais.
 - Footer com links sociais e contato.
 
@@ -150,23 +150,29 @@ Luc.dev/
 │   ├── components/
 │   │   ├── About.tsx
 │   │   ├── Certifications.tsx
+│   │   ├── ClippyAssistant.tsx
+│   │   ├── DesktopGoose.tsx
 │   │   ├── Experience.tsx
 │   │   ├── Footer.tsx
 │   │   ├── Hero.tsx
+│   │   ├── LoadingScreen.tsx
 │   │   ├── Navbar.tsx
+│   │   ├── PixelPet.tsx
 │   │   ├── ProjectsGrid.tsx
 │   │   ├── TechStack.tsx
 │   │   ├── ThemeProvider.tsx
 │   │   ├── ThemeToggle.tsx
 │   │   └── ui/
+│   │       ├── DotField.tsx
+│   │       └── SpotlightCard.tsx
 │   ├── data/
 │   │   ├── certifications.ts
+│   │   ├── loading.ts
 │   │   ├── profile.ts
 │   │   └── projects.ts
 │   └── lib/
 │       └── utils.ts
-├── tsconfig.json
-└── tsconfig.tsbuildinfo
+└── tsconfig.json
 ```
 
 ---

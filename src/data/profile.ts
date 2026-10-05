@@ -1,7 +1,5 @@
 export const profileData = {
   name: "Lucas Araujo de Souza",
-  role: "Desenvolvedor Backend & Software Engineering Student",
-  location: "Poá, SP - Brasil",
   about:
     "Estudante do 2º semestre de Desenvolvimento de Software Multiplataforma (DSM) na Fatec Itaquera e técnico em Administração pela Etec de Ferraz de Vasconcelos. Desenvolvedor com foco na construção de APIs RESTful, automação com Inteligência Artificial, arquitetura de software, sistemas distribuídos e gestão de bancos de dados. Uno experiência com Node.js, Python, TypeScript e bancos SQL/NoSQL à visão de eficiência operacional. Recentemente conquistei o 3º lugar no Hackathon da FATEC Itaquera, atuando como Tech Lead de uma equipe de 4 pessoas.",
   education: [
@@ -52,25 +50,6 @@ export const profileData = {
     "Atualização e controle de registros de usuários no banco de dados do programa de fidelidade, garantindo a precisão das informações. Atendimento direto ao público e apoio aos participantes de projetos sociais.",
 },
   ],
-  skills: {
-    languages: ["TypeScript", "JavaScript", "Python", "Java"],
-    frontend: ["HTML5", "CSS3", "Tailwind CSS", "React", "Next.js"],
-    backend: ["Node.js", "Express", "Flask (Python)"],
-    databaseAndORM: ["MongoDB", "PostgreSQL", "MySQL", "Prisma ORM"],
-    architectureAndServices: [
-      "APIs RESTful",
-      "Webhooks",
-      "Twilio API",
-      "Sistemas distribuídos",
-    ],
-    validationAndAI: [
-      "Zod",
-      "Inteligência Artificial",
-      "Engenharia de Prompts",
-      "AWS",
-    ],
-    devOpsAndTools: ["Git", "GitHub", "Docker", "Postman", "Linux", "Microsoft AI-900"],
-  },
   links: {
     github: "https://github.com/imlucsz",
     linkedin: "https://www.linkedin.com/in/imlucsz",
