@@ -73,7 +73,7 @@ function ProjectCard({ project, dimmed, onHoverStart, onHoverEnd }: CardProps) {
         transformPerspective: 900,
       }}
       className={cn(
-        "group relative flex flex-col justify-between overflow-hidden rounded-2xl border p-6 transition-all duration-300",
+        "group relative flex flex-col justify-between overflow-hidden rounded-2xl border p-5 transition-all duration-300",
         "border-zinc-800/80 bg-zinc-900/40 backdrop-blur-sm hover:border-zinc-700/80",
       )}
     >
@@ -107,7 +107,7 @@ function ProjectCard({ project, dimmed, onHoverStart, onHoverEnd }: CardProps) {
 
       <div className="relative pointer-events-none z-0 flex flex-col gap-4">
         {project.imageUrl && (
-          <div className="relative h-44 w-full overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/60">
+          <div className="relative h-40 w-full overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-950/60">
             <Image
               src={project.imageUrl}
               alt={project.title}
@@ -207,7 +207,7 @@ export function ProjectSpotlightCards({ projects }: { projects: Project[] }) {
   const [hoveredTitle, setHoveredTitle] = useState<string | null>(null);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
       {projects.map((project) => (
         <ProjectCard
           key={project.slug}

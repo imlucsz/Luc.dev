@@ -9,10 +9,10 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-24 border-t border-zinc-800/40 bg-zinc-950"
+      className="py-16 md:py-20 border-t border-zinc-800/40 bg-zinc-950"
     >
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -20,7 +20,7 @@ export function About() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-5 flex justify-center"
           >
-            <div className="relative group w-64 h-64 md:w-80 md:h-80">
+            <div             className="relative group w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72">
               <div className="absolute -inset-1 rounded-2xl bg-linear-to-r from-red-700 to-red-950 blur opacity-30 group-hover:opacity-70 transition duration-500" />
               <div className="relative w-full h-full rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
                 <Image
@@ -47,7 +47,7 @@ export function About() {
               <span>Sobre Mim</span>
             </div>
 
-            <h3 className="text-3xl font-bold text-zinc-100">
+            <h3 className="text-2xl md:text-3xl font-bold text-zinc-100">
               Transformando lógica em sistemas escaláveis
             </h3>
 

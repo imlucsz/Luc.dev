@@ -9,9 +9,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-zinc-800/60 bg-zinc-950 py-12 text-zinc-400">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
+    <footer className="border-t border-zinc-800/60 bg-zinc-950 py-10 text-zinc-400">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div className="max-w-full">
           <p className="font-mono text-sm font-semibold text-zinc-200">
             {profileData.name}
           </p>

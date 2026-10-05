@@ -19,9 +19,12 @@ export function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
+      onKeyDown={(event) => {
+        if (event.key === "Escape") closeMenu();
+      }}
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-zinc-950/90 border-b border-zinc-800/60"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
           onClick={closeMenu}
@@ -106,6 +109,8 @@ export function Navbar() {
             onClick={toggleMenu}
             className="md:hidden text-zinc-300 hover:text-zinc-100 p-1 focus:outline-none"
             aria-label="Alternar menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -119,7 +124,8 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-zinc-800/80 bg-zinc-950 w-full"
+            id="mobile-navigation"
+            className="md:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-zinc-800/80 bg-zinc-950 w-full"
           >
             <nav className="flex flex-col px-6 py-4 space-y-4 font-mono text-sm text-zinc-200">
               <Link

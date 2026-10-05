@@ -32,7 +32,7 @@ type Point = {
 };
 
 function createPoints(rotationX: number, rotationY: number): Point[] {
-  const radius = 168;
+  const radius = Math.min(168, Math.max(0, (window.innerWidth - 32) / 2 - 37));
   const goldenAngle = Math.PI * (3 - Math.sqrt(5));
 
   return technologies.map(([name, file], index) => {
@@ -95,13 +95,13 @@ export function TechStack() {
   };
 
   return (
-    <section id="techs" className="py-24 border-t border-zinc-800/40">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="techs" className="py-16 md:py-20 border-t border-zinc-800/40">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="mb-8">
           <h2 className="text-xs font-mono text-red-400 uppercase tracking-widest mb-2">
             Ecossistema
           </h2>
-          <h3 className="text-3xl font-bold text-zinc-100">
+          <h3 className="text-2xl md:text-3xl font-bold text-zinc-100">
             Tecnologias & Ferramentas
           </h3>
         </div>

@@ -56,11 +56,11 @@ function CertificationCard({
   );
 
   return duplicate ? (
-    <div aria-hidden="true" className="w-[min(82vw,320px)] shrink-0 sm:w-80">
+    <div aria-hidden="true" className="w-[min(86vw,300px)] shrink-0 sm:w-72">
       {card}
     </div>
   ) : (
-    <div className="w-[min(82vw,320px)] shrink-0 sm:w-80">{card}</div>
+    <div className="w-[min(86vw,300px)] shrink-0 sm:w-72">{card}</div>
   );
 }
 
@@ -69,16 +69,16 @@ export function Certifications() {
     <section
       id="certifications"
       aria-labelledby="certifications-title"
-      className="overflow-hidden border-t border-zinc-800/40 bg-zinc-950 py-24"
+      className="overflow-hidden border-t border-zinc-800/40 bg-zinc-950 py-16 md:py-20"
     >
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="mb-10">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+        <div className="mb-8">
           <p className="mb-2 text-xs font-mono uppercase tracking-widest text-red-400">
             Aprendizado contínuo
           </p>
           <h2
             id="certifications-title"
-            className="text-3xl font-bold text-zinc-100 md:text-4xl"
+            className="text-2xl font-bold text-zinc-100 md:text-3xl"
           >
             Certificações &amp; Credenciais
           </h2>
@@ -100,13 +100,13 @@ export function Certifications() {
             </p>
           </div>
         ) : (
-          <div className="group relative -mx-6 overflow-x-auto px-6 pb-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:overflow-hidden">
-            <div className="certifications-marquee flex w-max gap-5 py-2">
+          <div className="group relative -mx-4 overflow-x-auto px-4 pb-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:-mx-6 sm:px-6 sm:overflow-hidden">
+            <div className="certifications-marquee flex w-max gap-4 py-2 lg:gap-5">
               {[false, true].map((duplicate) => (
                 <div
                   key={duplicate ? "duplicate" : "original"}
                   aria-hidden={duplicate || undefined}
-                  className="flex w-max gap-5"
+                  className="flex w-max gap-4 lg:gap-5"
                 >
                   {certifications.map((certification, index) => (
                     <CertificationCard

@@ -8,7 +8,7 @@ import { ClippyAssistant } from "./ClippyAssistant";
 
 export function Hero() {
   return (
-    <section className="min-h-screen pt-40 pb-28 flex flex-col justify-center relative overflow-hidden bg-zinc-950">
+    <section className="min-h-[85svh] lg:min-h-[min(100svh,52rem)] pt-28 pb-20 md:pt-32 md:pb-24 flex flex-col justify-center relative overflow-hidden bg-zinc-950">
       <div className="absolute inset-0 z-0 pointer-events-none opacity-80">
         <DotField
           dotRadius={2.5}
@@ -29,22 +29,22 @@ export function Hero() {
         <ClippyAssistant />
       </div>
 
-      <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 relative z-10 pointer-events-none">
+      <div className="max-w-5xl mx-auto w-full px-4 sm:px-6 relative z-10 pointer-events-none">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-red-500/20 bg-red-900/30 text-red-300 text-xs font-mono mb-6 backdrop-blur-md"
+          className="inline-flex max-w-full items-center gap-2 px-3 py-1.5 rounded-full border border-red-500/20 bg-red-900/30 text-red-300 text-xs leading-snug font-mono mb-5 backdrop-blur-md"
         >
-          <Terminal size={14} />
-          <span>Desenvolvedor Backend & Engenharia de Software</span>
+          <Terminal size={14} className="shrink-0" />
+          <span className="min-w-0">Desenvolvedor Backend & Engenharia de Software</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl font-bold tracking-tight text-zinc-100 mb-6"
+          className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-zinc-100 mb-5"
         >
           {profileData.name}
         </motion.h1>
@@ -53,7 +53,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl mb-10"
+          className="text-base md:text-lg text-zinc-300 leading-relaxed max-w-2xl mb-8"
         >
           Construindo microsserviços, APIs RESTful robustas e sistemas
           distribuídos escaláveis com foco em alta disponibilidade e Clean Code.
@@ -85,7 +85,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-zinc-300 flex flex-col items-center gap-2 pointer-events-none z-10"
+        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 text-zinc-300 flex flex-col items-center gap-2 pointer-events-none z-10"
       >
         <span className="text-xs font-mono">Scroll</span>
         <ArrowDown size={14} className="animate-[bounce_2s_ease-in-out_infinite]" />

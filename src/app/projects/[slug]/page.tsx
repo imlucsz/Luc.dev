@@ -28,11 +28,11 @@ export default async function ProjectDetails(props: {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100 py-16 px-6">
+    <main className="min-h-screen bg-zinc-950 text-zinc-100 py-12 md:py-16 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-red-400 transition-colors mb-12 group"
+          className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-red-400 transition-colors mb-8 md:mb-10 group"
         >
           <ArrowLeft
             size={16}
@@ -41,14 +41,14 @@ export default async function ProjectDetails(props: {
           Voltar para o início
         </Link>
 
-        <div className="border-b border-zinc-800/80 pb-8 mb-10">
+        <div className="border-b border-zinc-800/80 pb-7 mb-8 md:mb-10">
           <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-red-400 mb-3">
             <span>{project.role}</span>
             <span>•</span>
             <span>{project.period}</span>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-zinc-100">
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-zinc-100 [overflow-wrap:anywhere]">
             {project.title}
           </h1>
 
@@ -56,7 +56,7 @@ export default async function ProjectDetails(props: {
             {project.tagline}
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-8">
+          <div className="flex flex-wrap gap-3 mt-6">
             {project.backendRepo && (
               <a
                 href={project.backendRepo}
@@ -96,7 +96,7 @@ export default async function ProjectDetails(props: {
         </div>
 
         {project.gallery && project.gallery.length > 0 ? (
-          <section className="mb-12 space-y-8">
+          <section className="mb-10 space-y-6 md:space-y-8">
             <h2 className="text-lg font-semibold text-zinc-200 flex items-center gap-2">
               <ImageIcon size={18} className="text-red-400" />
               Demonstração Visual
@@ -121,11 +121,11 @@ export default async function ProjectDetails(props: {
                     />
                   </div>
                   {item.caption && (
-                    <figcaption className="p-4 border-t border-zinc-800/60 bg-zinc-900/60 text-xs md:text-sm text-zinc-400 font-mono flex items-center gap-2">
+                    <figcaption className="p-3 sm:p-4 border-t border-zinc-800/60 bg-zinc-900/60 text-xs md:text-sm text-zinc-400 font-mono flex items-start gap-2">
                       <span className="text-red-400 font-bold">
                         #0{idx + 1}
                       </span>
-                      <span>{item.caption}</span>
+                      <span className="min-w-0 [overflow-wrap:anywhere]">{item.caption}</span>
                     </figcaption>
                   )}
                 </figure>
@@ -147,8 +147,8 @@ export default async function ProjectDetails(props: {
           )
         )}
 
-        <div className="space-y-12">
-          <section className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-6 md:p-8">
+        <div className="space-y-8 md:space-y-10">
+          <section className="bg-zinc-900/30 border border-zinc-800/60 rounded-xl p-5 sm:p-6 md:p-8">
             <h2 className="text-lg font-semibold text-zinc-200 mb-4 flex items-center gap-2">
               <Layers size={18} className="text-red-400" />
               Visão Geral do Sistema
@@ -164,11 +164,11 @@ export default async function ProjectDetails(props: {
                 <CheckCircle2 size={18} className="text-red-400" />
                 Principais Funcionalidades
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 {project.features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/50 text-sm text-zinc-300 flex items-start gap-3"
+                    className="p-3 sm:p-4 rounded-lg bg-zinc-900/40 border border-zinc-800/50 text-sm text-zinc-300 flex items-start gap-3"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 shrink-0" />
                     <span>{feature}</span>
